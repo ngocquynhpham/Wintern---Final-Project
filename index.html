@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/Authentication/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left-screen">
+            <img src="./assets/logoWhite.png" alt="">
+        </div>
+
+        <div class="right-screen">
+            <div class="form-login">
+                <img src="./assets/LogoBlue.png" alt="">
+                <h1>Đăng nhập</h1>
+
+                <form action="#">
+                    <div class="group-user">
+                        <input id="username" type="text" value="" placeholder="Tên đăng nhập">
+                    </div>
+                    <div class="group-pwd">
+                        <input id="password" type="password" value="" placeholder="Mật khẩu">
+                        <label id="label"></label>
+                    </div>
+                  
+                    <button onclick="Login()" type="submit">Đăng nhập</button>
+                    <p>Bạn chưa có tài khoản? <a class="register" href="./Authentication/register.html">Đăng kí ngay</a></p>
+                    <a href="./Authentication/forgotPassword.html" class="fwPwd">Bạn đã quên mật khẩu?</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+
+        // User admin
+        let user = {
+            username: "Admin",
+            password: "123456",
+            email: "admin@admin",
+            userID: "8238e4f5-b2e2-4fc8-890a-e6c5695cfee2"
+
+        };
+        let profile={
+            userID:"8238e4f5-b2e2-4fc8-890a-e6c5695cfee2",
+            email:"admin@admin",
+            gender:"Nam",
+            phone:"0366812907",
+            birthday:"28/02/2001",
+            name:"Cao Thành Tài",
+            Bio:"",
+            Avatar:""
+        }
+        let post={
+            userID:"8238e4f5-b2e2-4fc8-890a-e6c5695cfee2",
+            postID:"cb3bca31-5e2e-4653-b488-5bdb0f9bfdd7",
+            image:"",
+            caption:"",
+            postDate:""
+
+        } 
+        // Danh sachs cac user / profile / post
+        let list_users = [user];
+        let list_profiles=[profile];
+        let list_posts=[post];
+
+        // Set value cho localStorage
+        localStorage.setItem("users", JSON.stringify(list_users))
+        localStorage.setItem("profiles", JSON.stringify(list_profiles))
+        localStorage.setItem("posts", JSON.stringify(list_posts))
+
+        console.log(localStorage.getItem("users"))
+        console.log(localStorage.getItem("profiles"))
+        console.log(localStorage.getItem("posts"))
+        // JSON.parse(localStorage.getItem())
+    });
+</script>
+
+</html>
