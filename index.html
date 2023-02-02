@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/Authentication/style.css">
+    <script src="/Authentication/checkUser.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <img src="./assets/LogoBlue.png" alt="">
                 <h1>Đăng nhập</h1>
 
-                <form action="#">
+                <form >
                     <div class="group-user">
                         <input id="username" type="text" value="" placeholder="Tên đăng nhập">
                     </div>
@@ -30,7 +31,7 @@
                         <label id="label"></label>
                     </div>
                   
-                    <button onclick="Login()" type="submit">Đăng nhập</button>
+                    <button onclick="Login()" type="button">Đăng nhập</button>
                     <p>Bạn chưa có tài khoản? <a class="register" href="./Authentication/register.html">Đăng kí ngay</a></p>
                     <a href="./Authentication/forgotPassword.html" class="fwPwd">Bạn đã quên mật khẩu?</a>
                 </form>
@@ -43,7 +44,10 @@
 <script src="./index.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
-
+       
+        if(checkUsername("Admin")){
+            return 0;
+        }
         // User admin
         let user = {
             username: "Admin",
@@ -79,12 +83,12 @@
         localStorage.setItem("users", JSON.stringify(list_users))
         localStorage.setItem("profiles", JSON.stringify(list_profiles))
         localStorage.setItem("posts", JSON.stringify(list_posts))
-
-        console.log(localStorage.getItem("users"))
-        console.log(localStorage.getItem("profiles"))
-        console.log(localStorage.getItem("posts"))
         // JSON.parse(localStorage.getItem())
     });
+
+    function test(){
+        console.log("index.html")
+    }
 </script>
 
 </html>

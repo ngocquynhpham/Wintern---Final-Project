@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./checkUser.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,7 +19,7 @@
                 <img src="/assets/LogoBlue.png" alt="">
                 <h1>Đăng ký</h1>
 
-                <form action="">
+                <form >
                     <div class="group-user">
                         <input id="username" type="text" value="" placeholder="Tên đăng nhập">
                     </div>
@@ -32,7 +33,7 @@
                         <input id="confirmPassword" type="password" value="" placeholder="Xác nhận mật khẩu">
                         <label id="label">dffdgfd</label>
                     </div>
-                    <button onclick="register()">Đăng ký</button>
+                    <button onclick="register()" type="button">Đăng ký</button>
                     <p>Bạn đã có tài khoản?  <a class="register" href="/index.html">Đăng nhập</a></p>
                 </form>
             </div>
@@ -40,5 +41,5 @@
     </div>
     
 </body>
-<script src="/index.js"></script>
+<script src="./register.js"></script>
 </html>
