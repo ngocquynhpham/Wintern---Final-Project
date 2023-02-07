@@ -5,85 +5,588 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo/LogoBlue.png">
     <link rel="stylesheet" href="./homepage.css">
-
-
-
 </head>
 
 <body>
     <div class="container">
-        <div class="footer-navigation">
+        <div class="navigation">
             <div class="top-navigation">
-                <img class="logo" src="/assets/logoWhite.png" alt="logo " width="48px" height="48pxq">
-                <div class="group-link">
-                    <ul>
-                        <li class="home"><img  src="/assets/home.png" alt="Lỗi"><span> Trang chu</span> </li>
-                        <li class="post"><img  src="/assets/postWhite.png" alt="Lỗi"><span>Viết bài</span></li>
-                        <li class="mess"><img  src="/assets/messWhite.png" alt="Lỗi"><span>Tin nhắn</span> </li>
-                        <li class="notifications" ><img src="/assets/NotificationWhite.png" alt="Lỗi"><span>Thông báo </span></li>
-                        <li class="avatar" ><img id="avatar" src="/assets/avatar.jpg" alt="Lỗi"><span>Tài khoản</span></li>
-                    </ul>
-                </div>
-                
+                <img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq">
             </div>
             <div class="bot-navigation">
-                <img src="/assets/logoutBlack.png" alt="Lỗi">
-                <span>Đăng xuất</span>
+                <a href=""><img src="/assets/iconMenu/Default/Logout_White.png" alt="Lỗi">
+                    <span>Đăng xuất</span></a>
             </div>
-            
         </div>
-        <div class="header-navigation">
+        <div class="full-navigation">
             <div class="top-navigation">
-                <img class="logo" src="/assets/logoWhite.png" alt="logo " width="48px" height="48pxq">
+                <img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq">
                 <div class="group-link">
                     <ul>
-                        <li class="home"><img  src="/assets/home.png" alt="Lỗi"><span> Trang chu</span> </li>
-                        <li class="post"><img  src="/assets/notifications.png" alt="Lỗi"><span>Viết bài</span></li>
-                        <li class="mess"><img  src="/assets/notifications.png" alt="Lỗi"><span>Tin nhắn</span> </li>
-                        <li class="notifications" ><img src="/assets/notifications.png" alt="Lỗi"><span>Thông báo </span></li>
-                        <li class="avatar" ><img id="avatar" src="/assets/avatar.jpg" alt="Lỗi"><span>Tài khoản</span></li>
+                        <li class="home"><a href="/Home/homepage.html"><img src="/assets/iconMenu/Active/Home_White.png"
+                                    alt="Lỗi"><span>Trang chủ</span></a> </li>
+                        <li class="post"><a href="/Post/post.html"> <img src="/assets/iconMenu/Default/Create_White.png"
+                                    alt="Lỗi"><span>Viết bài</span></a></li>
+                        <li class="mess"><a href=""><img src="/assets/iconMenu/Default/Mess_White.png"
+                                    alt="Lỗi"><span>Tin nhắn</span> </a></li>
+                        <li class="notifications"><a href=""><img src="/assets/iconMenu/Default/Nootification_White.png"
+                                    alt="Lỗi"><span>Thông báo </span></a></li>
+                        <li class="avatar"><a href="/Profile/profile.html"><img id="avatar" src="/assets/avatar.jpg" alt="Lỗi"><span>Tài
+                                    khoản</span></a></li>
                     </ul>
                 </div>
-                
-    
             </div>
             <div class="bot-navigation">
-                <img class="logout-White" src="/assets/logoutWhite.png" alt="Lỗi">
-                <img class="logout-Black" src="/assets/logoutBlack.png" alt="Lỗi">
-                <span>Đăng xuất</span>
-            </div>
+                <a href="/index.html"><img class="logout" src="/assets/iconMenu/Default/Logout_White.png" alt="Lỗi">
+                    <span>Đăng xuất</span></a>
 
-           
+            </div>
         </div>
+
         <div class="content">
+            <div class="story">
+                <a href=""><img src="/assets/avatar.jpg" alt="" width="50px"></a>
+                <a href=""><img src="/assets/avatar.jpg" alt="" width="50px"></a>
+                <a href=""><img src="/assets/avatar.jpg" alt="" width="50px"></a>
+                <a href=""><img src="/assets/avatar.jpg" alt="" width="50px"></a>
+                <a href=""><img src="/assets/avatar.jpg" alt="" width="50px"></a>
+            </div>
             <div class="main-content">
-                <p style="color: white;">Slideshow 1:</p>
-                <!-- <div class="slideshow-container">
-                  <div class="mySlides1">
-                    <img src="/assets/LogoBlue.png" width:10%>
-                  </div>
-                
-                  <div class="mySlides1">
-                    <img src="/assets/logoWhite.png" width:10%>
-                  </div>
-                  
-                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-                 
-                 
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <div class="mySlides fade">
+                                <img src="/assets/avatar.jpg">
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="/assets/arrow_next.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="/assets/arrow_pre.png" style="width:100%">
+                            </div>
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)"><img src="/assets/arrow_pre.png" alt=""></a>
+                        <a class="next" onclick="plusSlides(1)"><img src="/assets/arrow_next.png" alt=""></a>
+
+                        <div class="mul" style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <a href="#popup1"> <img src="/assets/iconMenu/Default/Comment_White.png" alt="#"></a>
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+
+                            <p>Comment</p>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                    </div>
                 </div>
-                 -->
+
+
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <img src="/assets/avatar.jpg">
+                        </div>
+                        <div class="mySlides2 fade">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_White.png" alt="">
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+
+                            <p>Comment</p>
+
+                            <p>Comment</p>
+                            <p>Comment</p>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <img src="/assets/avatar.jpg">
+                        </div>
+                        <div class="mySlides2 fade">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_White.png" alt="">
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+
+                            <p>Comment</p>
+
+                            <p>Comment</p>
+                            <p>Comment</p>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <img src="/assets/avatar.jpg">
+                        </div>
+                        <div class="mySlides2 fade">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_White.png" alt="">
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+
+                            <p>Comment</p>
+
+                            <p>Comment</p>
+                            <p>Comment</p>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <img src="/assets/avatar.jpg">
+                        </div>
+                        <div class="mySlides2 fade">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_White.png" alt="">
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+
+                            <p>Comment</p>
+
+                            <p>Comment</p>
+                            <p>Comment</p>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <img src="/assets/avatar.jpg">
+                        </div>
+                        <div class="mySlides2 fade">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_White.png" alt="">
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+
+                            <p>Comment</p>
+
+                            <p>Comment</p>
+                            <p>Comment</p>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <img src="/assets/avatar.jpg">
+                        </div>
+                        <div class="mySlides2 fade">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_White.png" alt="">
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+
+                            <p>Comment</p>
+
+                            <p>Comment</p>
+                            <p>Comment</p>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="infor">
+                        <img class="avatar" src="/assets/avatar.jpg" alt="">
+                        <span class="name">Cao Thành Tài </span>
+                        <span class="time"> ᛫ 2d</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="content-image">
+                            <img src="/assets/avatar.jpg">
+                        </div>
+                        <div class="mySlides2 fade">
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_White.png" alt="">
+                        </div>
+                        <div class="group-statistical">
+                            <div class="statistical">
+                                <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                                <span>᛫</span>
+                                <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                    thích </span>
+                            </div>
+                            <p class="status">Status</p>
+                            <div>
+                                <p>Comment</p>
+
+                                <p>Comment</p>
+                                <p>Comment</p>
+                            </div>
+                           <div>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                           </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <div class="avatar-temp">
+                        <div class="infor">
+                            <img src="/assets/avatar.jpg" alt="">
+                            <span>Cao Thành Tài</span>
+                        </div>
+                    </div>
+                    <div class="left-comment">
+                        <img src="/assets/avatar.jpg" > 
+                    </div>
+                    <div class="right-comment">
+                        <div class="infor">
+                            <img src="/assets/avatar.jpg" alt="">
+                            <span>Cao Thành Tài</span>
+                        </div>
+                        <div class="group-comment">
+                            <div class="comment">
+                                <div class="infor">
+                                    <img src="/assets/avatar.jpg" alt="" width="100px">
+                                </div>
+                                <div class="infor-comment">
+                                    <div class="main-comment">
+                                        <span class="name">Cao Thành Tài</span>
+                                        <span class="comment"> comment</span>
+                                    </div>
+                                    <p class="time">12h</p>
+                                    
+                                </div>
+                               
+                            </div>
+                            
+                            <div class="comment">
+                                <div class="infor">
+                                    <img src="/assets/avatar.jpg" alt="" width="100px">
+                                </div>
+                                <div class="infor-comment">
+                                    <div class="main-comment">
+                                        <span class="name">Cao Thành Tài</span>
+                                        <span class="comment"> comment</span>
+                                    </div>
+                                    <p class="time">12h</p>
+                                    
+                                </div>
+                               
+                            </div>
+                            <div class="comment">
+                                <div class="infor">
+                                    <img src="/assets/avatar.jpg" alt="" width="100px">
+                                </div>
+                                <div class="infor-comment">
+                                    <div class="main-comment">
+                                        <span class="name">Cao Thành Tài</span>
+                                        <span class="comment"> comment</span>
+                                    </div>
+                                    <p class="time">12h</p>
+                                    
+                                </div>
+                               
+                            </div>
+                            <div class="comment">
+                                <div class="infor">
+                                    <img src="/assets/avatar.jpg" alt="" width="100px">
+                                </div>
+                                <div class="infor-comment">
+                                    <div class="main-comment">
+                                        <span class="name">Cao Thành Tài</span>
+                                        <span class="comment"> comment</span>
+                                    </div>
+                                    <p class="time">12h</p>
+                                    
+                                </div>
+                               
+                            </div>
+                            <div class="comment">
+                                <div class="infor">
+                                    <img src="/assets/avatar.jpg" alt="" width="100px">
+                                </div>
+                                <div class="infor-comment">
+                                    <div class="main-comment">
+                                        <span class="name">Cao Thành Tài</span>
+                                        <span class="comment"> comment</span>
+                                    </div>
+                                    <p class="time">12h</p>
+                                    
+                                </div>
+                               
+                            </div>
+                            <div class="comment">
+                                <div class="infor">
+                                    <img src="/assets/avatar.jpg" alt="" width="100px">
+                                </div>
+                                <div class="infor-comment">
+                                    <div class="main-comment">
+                                        <span class="name">Cao Thành Tài</span>
+                                        <span class="comment"> comment</span>
+                                    </div>
+                                    <p class="time">12h</p>
+                                    
+                                </div>
+                               
+                            </div>
+
+                            <div class="comment">
+                                <div class="infor">
+                                    <img src="/assets/avatar.jpg" alt="" width="100px">
+                                </div>
+                                <div class="infor-comment">
+                                    <div class="main-comment">
+                                        <span class="name">Cao Thành Tài</span>
+                                        <span class="comment"> comment</span>
+                                    </div>
+                                    <p class="time">12h</p>
+                                    
+                                </div>
+                               
+                            </div>
+                            
+                           
+                        </div>
+                        <div class="emotion">
+                            <img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_Black.png"
+                                alt="">
+                            <img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_Black.png"
+                                alt="">
+                            <img onclick="Dislike()" id="iconDislikeActive"
+                                src="/assets/iconMenu/Active/Dislike_Black.png" alt="">
+                            <img onclick="Dislike()" id="iconDislikeDefault"
+                                src="/assets/iconMenu/Default/Dislike_Black.png" alt="">
+                            <img src="/assets/iconMenu/Default/Comment_Black.png" alt="">
+                        </div>
+
+                        <div class="statistical">
+                            <span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+                            <span>᛫</span>
+                            <span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+                                thích </span>
+                        </div>
+                        <div>
+                            <input type="text" name="" id="" placeholder="Viết bình luận...">
+                        </div>
+                       
+                    </div>
+                    
+
+                   
+                    
+                </div>
+                <div>
+                    <a class="close" href="#">&times;</a>
+                </div>
             </div>
 
         </div>
-
-
-
-    </div>
-
-
 </body>
 <script src="./homepage.js"></script>
 
