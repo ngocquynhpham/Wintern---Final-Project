@@ -1,5 +1,7 @@
 let infor = (JSON.parse(localStorage.getItem("users")))
 
+
+
 function checkUsername(username) {
    
     for (let i = 0; i < infor.length; i++) {

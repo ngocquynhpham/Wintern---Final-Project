@@ -1,0 +1,283 @@
+@import url(/index.css);
+
+.content{
+    background-color: #111111;
+}
+.content p{
+    
+    margin: 30px;
+    width: 100%;
+}
+.content a{
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.border{
+    width: 70%;   
+  
+}
+
+.border h1{
+    padding:30px;
+    font-weight: 500;
+    
+}
+.border{
+    border: 1px solid #000;
+    background-color: #000;
+    color: var(--white-color);
+    border-radius: 15px;
+    
+}
+
+ .border table{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.border span{
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+
+tbody{
+    margin:0px 100px;
+    
+}
+
+
+tbody span{
+font-size: 18px;
+color: gray;
+}
+    
+.border  .title{
+    color: var(--white-color);
+
+} 
+.avatar{
+    max-width: 80px;
+    max-height: 80px;
+    border: 0px;
+    border-radius: 50%;
+}
+td{
+    padding: 20px;
+}
+
+.name {
+
+    padding: 0;
+    padding-left: 20px;
+}
+.edit{
+    padding: 0;
+    padding-left: 20px;
+}
+
+.edit .btn-edit{
+    font-size: 16px;
+    color: var(--primary-color);
+    padding-bottom: 0px;
+}
+
+
+.border input{
+    
+   padding: 10px;
+   width: 100%;
+   background-color: #000; 
+   border: 1px solid #111111;
+    
+}
+.note-web{
+    padding: 0px;
+    padding-left: 20px;
+    
+}
+.note-web .note{
+    font-size: 14px;
+}
+textarea{
+    width: 100%;
+    background-color: #000; 
+   border: 1px solid #111111;
+    
+}
+
+
+
+select{
+    background-color: #111111;
+    color: var(--white-color);
+}
+
+.border .note-recomment{
+    font-size: 14px;
+    color: var(--white-color);
+}
+input[type='checkbox']{
+    width: 3%;
+}
+button{
+    background-color: var(--primary-color);
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .content p{
+    
+        margin: 10px;
+        width: 100%;
+    }
+    .content a{
+        
+        font-size: 16px;
+    }
+    
+    .border{
+        width: 90%;   
+      
+    }
+    
+    .border h1{
+        padding:15px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        
+    }
+    .border{
+        border: 1px solid #000;
+        background-color: #000;
+        color: var(--white-color);
+        border-radius: 15px;
+        
+    }
+    
+     .border table{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .border span{
+        font-size: 12px;
+        font-weight: 400;
+        
+    }
+    
+    
+    tbody{
+        margin:0px 5px;
+        
+    }
+    
+    
+    tbody span{
+    font-size: 14px;
+    color: gray;
+    }
+        
+    .border  .title{
+        color: var(--white-color);
+    
+    } 
+    .avatar{
+        max-width: 40px;
+        max-height: 40px;
+        border: 0px;
+        border-radius: 50%;
+    }
+    td{
+        padding: 5px;
+    }
+    
+    .name {
+    
+        padding: 0;
+        padding-left: 10px;
+    }
+    .edit{
+        padding: 0;
+        padding-left: 10px;
+    }
+    
+    .edit .btn-edit{
+        font-size: 12px;
+        color: var(--primary-color);
+        padding-bottom: 0px;
+    }
+    
+    
+    .border input{
+        
+       padding: 10px;
+       width: 100%;
+       background-color: #000; 
+       border: 1px solid #111111;
+        
+    }
+    .note-web{
+        padding: 0px;
+        padding-left: 20px;
+        
+    }
+    .note-web .note{
+        font-size: 14px;
+    }
+    textarea{
+        width: 100%;
+        background-color: #000; 
+       border: 1px solid #111111;
+        
+    }
+    
+    
+    
+    select{
+        background-color: #111111;
+        color: var(--white-color);
+    }
+    
+    .border .note-recomment{
+        font-size: 14px;
+        color: var(--white-color);
+    }
+    input[type='checkbox']{
+        width: 10%;
+    }
+    button{
+        background-color: var(--primary-color);
+        width: 50px;
+        height: 30px;
+        border-radius: 4px;
+        border: 1px solid var(--primary-color);
+        color: var(--white-color);
+        font-weight: 500;
+    }
+    
+}
+
+
+

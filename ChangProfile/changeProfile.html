@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo/LogoBlue.png">
+    <link rel="stylesheet" href="./changProfile.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="top-navigation">
+                <img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq">
+            </div>
+            <div class="bot-navigation">
+                <a href=""><img src="/assets/iconMenu/Default/Logout_White.png" alt="Lỗi">
+                    <span>Đăng xuất</span></a>
+            </div>
+        </div>
+        <div class="full-navigation">
+            <div class="top-navigation">
+                <img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq">
+                <div class="group-link">
+                    <ul>
+                        <li class="home"><a href="/Home/homepage.html"><img
+                                    src="/assets/iconMenu/Default/Home_White.png" alt="Lỗi"><span>Trang chủ</span></a>
+                        </li>
+                        <li class="post"><a href="/Post/post.html"> <img src="/assets/iconMenu/Default/Create_White.png"
+                                    alt="Lỗi"><span>Viết bài</span></a></li>
+                        <li class="mess"><a href=""><img src="/assets/iconMenu/Default/Mess_White.png"
+                                    alt="Lỗi"><span>Tin nhắn</span> </a></li>
+                        <li class="notifications"><a href=""><img src="/assets/iconMenu/Default/Nootification_White.png"
+                                    alt="Lỗi"><span>Thông báo </span></a></li>
+                        <li class="avatar"><a href="/Profile/profile.html"><img id="avatar" src="/assets/avatar.jpg"
+                                    alt="Lỗi"><span>Tài
+                                    khoản</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bot-navigation">
+                <a href="/index.html"><img class="logout" src="/assets/iconMenu/Default/Logout_White.png" alt="Lỗi">
+                    <span>Đăng xuất</span></a>
+
+            </div>
+        </div>
+
+        <div class="content">
+            <p><a href="/Profile/profile.html"> Cài  đặt</a> </p>
+            <div class="border">
+                    <h1>Chỉnh sửa trang cá nhân </h1>
+                    <form action="">
+                       <table>                        
+                            <tr class="group-avatar">
+                                <td rowspan="2">
+                                    <img class="avatar" src="/assets/avatar.jpg" alt="" width="100px">
+                                </td>
+                                
+                                <td class="name">
+                                    <span class="title" >Thành Tài</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="edit" >
+                                    <a a class="btn-edit" href="">Thay đổi ảnh đại diện</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="fullname"><span class="title">Tên</span></td>
+                                <td><input type="text"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="username"><span class="title">Tên đăng nhập</span></td>
+                                <td><input type="text"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="phone"><span class="title">SDT</span></td>
+                                <td><input type="number"></td>
+                            </tr>
+                            <tr>
+                                <td class="email"><span class="title">Email</span></td>
+                                <td><input type="email"></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="title" > Trang web </span>
+                                </td>
+                                <td class="web">
+                                    <input type="text" placeholder="trang web">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td  class="note-web"><span class="note"> Bạn chỉ  có thể chỉnh sửa liên kiết trên dị động. Hãy mở ứng dụng Instagram và chỉnh sửa trang cá nhân của bạn để thay đổi trang web trong phần tiểu sử</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="title"> tiểu sử</span> </td>
+                                <td><textarea name="" id="" rows="5"></textarea></td>
+                            </tr>
+                    
+                            <tr>
+                                <td><span class="title"> giới tính </span></td>
+                                <td>
+                                    <select id="gender" name="gender">
+                                        <option value="male">Nam</option>
+                                        <option value="female">Nữ</option>
+                                        <option value="secret">Không muốn tiết lộ</option>
+                                    </select>
+                                </td>
+                               
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="title"> Gợi ý tài khoản tương tự </span>
+                                </td>
+                               <td>
+                                <input class="checkbox" type="checkbox">
+                                <span class="note-recomment">Bao gồm tài khoản của bạn khi đề xuất tài khoản tương tự mà mọi người có thể muốn theo dõi</span>
+                               </td>
+                            </tr>
+                            
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                <button> Gửi</button>
+                            </td>
+                        </tr>
+
+                       </table>
+
+
+
+                    </form>
+
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+</html>
+
+ <!-- <div class="group-avatar">
+                            <div class="avatar">
+                                <img src="/assets/avatar.jpg" alt="">
+                            </div>
+                            <div class="setting-avatar">
+                                <span class="username">thanhftaif</span>
+                                <button class="change-avatar"> Thay đổi ảnh đại diện</button>
+                            </div>
+
+                        </div>
+
+                        <div class="information">
+                            <div class="fullname">
+                                <div class="firstname">
+                                    <span>Họ</span>
+                                    <input type="text" name="" id="" placeholder="Điền họ">
+                                </div>
+                                <div class="lastname">
+                                    <span>Tên</span>
+                                    <input type="" name="" id="" placeholder="Điền Tên">
+                                </div>
+                            </div>
+                            
+                            <div class="sdt-gender">
+                                <div class="group-sdt">
+                                    <span>Số điện thoại</span>
+                                    <div class="sdt">
+                                        <img class="imgVN" src="/assets/co.png" alt="" width="20px" height="auto">
+                                        <input type="number" placeholder="84+">
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="gender">
+                                    <span>Gender</span>
+                                    <div>
+                                        <select id="gender" name="gender">
+                                            <option value="male">Nam</option>
+                                            <option value="female">Nữ</option>
+                                            <option value="secret">Không muốn tiết lộ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="email">
+                                <span>Email</span>
+                                <input type="email" name="" id="">
+                            </div>
+
+                            
+
+                            <div class="BIO">
+                                <span>Tiểu sử</span>
+                                <textarea name="" id="" cols="100" rows="5"></textarea>
+                            </div>
+                            <div class="btn">
+                                <button>Gửi</button>
+                            </div>
+                            
+
+                        </div>
+                        -->

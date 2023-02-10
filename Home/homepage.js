@@ -32,7 +32,7 @@ let iconLikeActive=document.getElementById("iconLikeActive")
 let iconDislikeActive=document.getElementById("iconDislikeActive")
 let numberLike=document.getElementById("numberLike")
 let numberDislike=document.getElementById("numberDislike")
-function Like(url){
+function Like(){
     if(iconLikeDefault.style.display!=="none"){
         iconLikeDefault.style.display="none";
         iconLikeActive.style.display="inline";
