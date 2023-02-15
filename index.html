@@ -34,7 +34,7 @@
                     <button onclick="Login()" type="button">Đăng nhập</button>
                     <p>Bạn chưa có tài khoản? <a class="register" href="./Authentication/register.html">Đăng kí ngay</a>
                     </p>
-                    <a href="./Authentication/forgotPassword.html" class="fwPwd">Bạn đã quên mật khẩu?</a>
+                  
                 </form>
 
             </div>
@@ -43,58 +43,6 @@
 
 </body>
 <script src="./index.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
 
-
-
-        if (infor===null) {
-          
-        
-
-
-            // User admin
-            let user = {
-                username: "Admin",
-                password: "123456",
-                email: "admin@admin",
-                userID: "8238e4f5-b2e2-4fc8-890a-e6c5695cfee2"
-
-            };
-            let profile = {
-                userID: "8238e4f5-b2e2-4fc8-890a-e6c5695cfee2",
-                email: "admin@admin",
-                gender: "Nam",
-                phone: "0366812907",
-                birthday: "28/02/2001",
-                name: "Cao Thành Tài",
-                Bio: "",
-                Avatar: ""
-            }
-            let post = {
-                userID: "8238e4f5-b2e2-4fc8-890a-e6c5695cfee2",
-                postID: "cb3bca31-5e2e-4653-b488-5bdb0f9bfdd7",
-                image: "",
-                caption: "",
-                postDate: ""
-
-            }
-            // Danh sachs cac user / profile / post
-            let list_users = [user];
-            let list_profiles = [profile];
-            let list_posts = [post];
-
-            // Set value cho localStorage
-            localStorage.setItem("users", JSON.stringify(list_users))
-            localStorage.setItem("profiles", JSON.stringify(list_profiles))
-            localStorage.setItem("posts", JSON.stringify(list_posts))
-            // JSON.parse(localStorage.getItem())
-        }
-    });
-
-    function test() {
-        console.log("index.html")
-    }
-</script>
 
 </html>

@@ -1,4 +1,4 @@
-let infor = (JSON.parse(localStorage.getItem("users")))
+
 
 
 

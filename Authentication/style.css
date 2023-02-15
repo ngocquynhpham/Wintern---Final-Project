@@ -107,6 +107,10 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
+    color: var(--text-color);
+}
+.right-screen h1{
+    color: var(--text-color);
 }
 
 .right-screen .form-login .register {

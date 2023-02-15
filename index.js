@@ -1,33 +1,39 @@
 let username = document.getElementById("username");
 let pwd = document.getElementById("password");
 let label = document.getElementById("label");
-let api = "https://sheetdb.io/api/v1/6scb1syc9l8o0?sheet=user"
-fetch(api).then((response) => response.json())
-    .then((data) => console.log(data))
+let api = "http://3ca6-210-245-20-161.ngrok.io/login/"
 
+            
 
 
 // Login
 
 function checkUsername() {
-    
-     fetch(api).then((response) => response.json())
-        .then((data) => {
-            for (let i = 0; i < data.length; i++) {
-                console.log(data)
-                if(data[i].username===username.value && atob(data[i].password) ===pwd.value)
-                {
-                    
-                        label.style.display = "none"
-                        username.style.borderColor = "green"
-                        pwd.style.borderColor = "green"
-                        window.location.href = "./Home/homepage.html"
-                        return true
-                }
-            } 
-                label.innerHTML = "Tài khoản hoặc mật khẩu không đúng"           
+    let Infor={"username":username.value,
+               "password":pwd.value}
+       
 
-        });
+    fetch(api,{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(Infor)
+    })
+        .then((res)=>{
+            if (res.status!==200){
+            label.style.display="block"
+            label.innerHTML = "Tài khoản hoặc mật khẩu không đúng"         
+            return false  
+            }else{
+                
+                label.style.display = "none"
+                username.style.borderColor = "green"
+                pwd.style.borderColor = "green"
+                window.location.href = "./Home/homepage.html"
+                return res.json()
+            }
+        }).then((data) => localStorage.setItem( "Token" , data.token))
     
         
 

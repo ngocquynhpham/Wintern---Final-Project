@@ -176,47 +176,7 @@
 }
 
 /* popup comment */
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
 
-
-}
-
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-.overlay .close {
-    position: absolute;
-    top: 5px;
-    right: 25px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--white-color);
-}
-
-.popup {
-    display: flex;
-    margin: 70px auto;
-    background:var(--white-color);
-    border-radius: 10px;
-    width: 80%;
-    position: relative;
-    height: 80%;
-    gap: 10px;
-
-}
 
 .popup h2 {
     margin-top: 0;
@@ -284,7 +244,7 @@
     gap: 25px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .right-comment .group-comment .comment{
     display: flex;
@@ -486,7 +446,7 @@
 .nextStatus {
     position: absolute;
     top: 60px;
-    right: 140px;
+    right: 12%;
     transition: all 200ms;
     font-size: 30px;
     font-weight: bold;
@@ -496,7 +456,7 @@
 .preStatus{
     position: absolute;
     top: 60px;
-    left: 140px;
+    left: 12%;
     transition: all 200ms;
     font-size: 30px;
     font-weight: bold;
@@ -533,35 +493,85 @@
     display: flex;
     align-items: center;
     transition: opacity 500ms;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.5);
 
 }
 #popupNotification .popupNotification {
     display: flex;
-    flex: 1;
+
     align-items: center;
     justify-content: center;
-    background:#000000;
-    border-radius: 10px;
-    
+    background:#222222;
     position: relative;
     height: 100%;
     gap: 10px;
     color: var(--white-color);
 
 }
-#popupNotification .backHomepage{
-    flex: 2;
-    width: 500px;
-}
 
-#popupNotification .backHomepage a {
-    background-color: #06D85F;
-    width: 100px;
-}
+
 
 #popupNotification .popupNotification .group-link ul{
     list-style: none;
+}
+.popupNotification .full-navigation{
+    height: 100%;
+    align-items: center;
+    max-width: 100px;
+    border-right:1px solid #333333 ;
+}
+
+.popupNotification  .group-comment{
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 14px;
+}
+.group-comment h1{
+    margin: 20px;
+    text-align: center  ;
+}
+
+.popupNotification  .group-comment::-webkit-scrollbar {
+    width: 10px;
+}
+.group-comment .list-notification {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.list-notification .notifaticate-time{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+.list-notification .notifaticate-time h2{
+    font-size: 18px;
+}
+.group-comment .notification-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.group-comment .notification-group p{
+    max-width: 200px;
+}
+.group-comment .notification-group img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;    
+    object-fit: fill;
+}
+
+.group-comment .notification-group p{
+    font-size: 15px; 
 }
 @media screen and (max-width: 500px) {
 
@@ -575,8 +585,10 @@
         grid-template-columns: 1fr ;
     }
 
-
-
+    #popup1 .infor{
+        display: none;
+    }
+ 
   #popup1  .avatar-temp{
         display:block ;
     }
@@ -625,4 +637,57 @@
        
     }
 
+
+    /* popup Notification */
+  
+    
+    #popupNotification .popupNotification {
+       
+        width: 100%;
+        flex-direction: column;
+      
+    
+    }
+    
+    
+    
+    #popupNotification .popupNotification .group-link ul{
+        list-style: none;
+    }
+    .popupNotification .full-navigation{
+        height: 100%;
+        align-items: center;
+        width: 100%;
+        border-right:1px solid #333333 ;
+        max-width: none;
+    }
+    
+    .popupNotification  .group-comment{
+        padding: 0px 20px;
+        width: 100%;
+    }
+    
+    
+    .list-notification .notifaticate-time{
+        align-items: flex-start;
+        gap: 10px;
+        
+    }
+   
+    .group-comment .notification-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        
+    }
+    
+    .group-comment .notification-group p{
+        max-width: 100%;
+    }
+    .group-comment .notification-group img{
+        width: 50px;
+        height: 50px;
+      
+    }
 }
