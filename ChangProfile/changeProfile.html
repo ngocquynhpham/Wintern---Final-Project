@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Chỉnh sửa thông tin</title>
     <link rel="icon" type="image/x-icon" href="/assets/logo/LogoBlue.png">
     <link rel="stylesheet" href="./changProfile.css">
 </head>
@@ -14,7 +14,7 @@
     <div class="container">
         <div class="navigation">
             <div class="top-navigation">
-                <img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq">
+                <a href="./homepage.html"><img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq"></a>
             </div>
             <div class="bot-navigation">
                 <a href=""><img src="/assets/iconMenu/Default/Logout_White.png" alt="Lỗi">
@@ -23,7 +23,7 @@
         </div>
         <div class="full-navigation">
             <div class="top-navigation">
-                <img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq">
+                <a href="./homepage.html"><img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq"></a>
                 <div class="group-link">
                     <ul>
                         <li class="home"><a href="/Home/homepage.html"><img
@@ -33,7 +33,7 @@
                                     alt="Lỗi"><span>Viết bài</span></a></li>
                         <li class="mess"><a href=""><img src="/assets/iconMenu/Default/Mess_White.png"
                                     alt="Lỗi"><span>Tin nhắn</span> </a></li>
-                        <li class="notifications"><a href=""><img src="/assets/iconMenu/Default/Nootification_White.png"
+                        <li class="notifications"><a href="#popupNotification"><img src="/assets/iconMenu/Default/Nootification_White.png"
                                     alt="Lỗi"><span>Thông báo </span></a></li>
                         <li class="avatar"><a href="/Profile/profile.html"><img id="avatar" src="/assets/avatar.jpg"
                                     alt="Lỗi"><span>Tài
@@ -49,7 +49,7 @@
         </div>
 
         <div class="content">
-            <p><a href="/Profile/profile.html"> Cài  đặt</a> </p>
+            <p><a href="/Profile/profile.html"> Quay lại</a> </p>
             <div class="border">
                     <h1>Chỉnh sửa trang cá nhân </h1>
                     <form action="">
@@ -66,7 +66,7 @@
 
                             <tr>
                                 <td class="edit" >
-                                    <a  class="btn-edit" href="">Thay đổi ảnh đại diện</a>
+                                    <a  class="btn-edit" href="#popupChangeAvatar">Thay đổi ảnh đại diện</a>
                                     <a  class="btn-edit" href="/Authentication/forgotPassword.html">Thay đổi mật khẩu</a>
                                 </td>
                             </tr>
@@ -77,7 +77,7 @@
                             </tr>
 
                             <tr>
-                                <td class="username"><span class="title">Tên đăng nhập</span></td>
+                                <td class="username"><span class="title">Tên tài khoản</span></td>
                                 <td><input type="text"></td>
                             </tr>
 
@@ -134,7 +134,7 @@
 
                             </td>
                             <td>
-                                <button> Gửi</button>
+                                <button> Lưu lại</button>
                             </td>
                         </tr>
 
@@ -149,6 +149,129 @@
 
         </div>
     </div>
+    <div id="popupNotification" class="overlay">
+        <div class="popupNotification">
+            <div class="full-navigation">
+                <div class="top-navigation">
+                    <a href="./homepage.html"><img class="logo" src="/assets/logo/logoWhite.png" alt="logo " width="48px" height="48pxq"></a>
+                    <div class="group-link">
+                        <ul>
+                            <li class="home"><a href="/Home/homepage.html"><img
+                                        src="/assets/iconMenu/Default/Home_White.png" alt="Lỗi"> </li>
+                            <li class="post"><a href="#popupPostImg"> <img
+                                        src="/assets/iconMenu/Default/Create_White.png" alt="Lỗi"></a></li>
+                            <li class="mess"><a href=""><img src="/assets/iconMenu/Default/Mess_White.png" alt="Lỗi">
+                                </a></li>
+                            <li class="notifications"><a href="#"><img
+                                        src="/assets/iconMenu/Active/Notification_White.png" alt="Lỗi"></a></li>
+                            <li class="avatar"><a href="/Profile/profile.html"><img id="avatar" src="/assets/avatar.jpg"
+                                        alt="Lỗi"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bot-navigation">
+                    <a href="/index.html"><img class="logout" src="/assets/iconMenu/Default/Logout_White.png" alt="Lỗi">
+                    </a>
+
+                </div>
+            </div>
+            <div class="group-comment">
+                <h1>Thông báo</h1>
+                <div class="list-notification">
+
+                    <div class="notifaticate-time">
+
+                        <h2>Tuần này</h2>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+
+
+                    </div>
+                    <div class="notifaticate-time">
+                        <h2>Trước đó</h2>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới Người dung vừa đăng bài viết mới Người dung vừa đăng bài
+                                viết mới Người dung vừa đăng bài viết mới Người dung vừa đăng bài viết mới Người dung
+                                vừa đăng bài viết mới Người dung vừa đăng bài viết mới Người dung vừa đăng bài viết mới
+                            </p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+
+                        </div>
+
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+                        <div class="notification-group">
+                            <img src="/assets/co.png" alt="">
+                            <p>Người dung vừa đăng bài viết mới</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="backHomepage">
+
+
+
+        </div>
+
+    </div>
+   
 </body>
 
 

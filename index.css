@@ -16,12 +16,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
+.container{
+  overflow-y: scroll;
+}
+.target{
+  font-weight: 700 !important ; 
+}
 a{
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
+}
+button{
+  cursor: pointer;
 }
 
 .container {
@@ -81,7 +88,7 @@ width: 100%;
 }
 
 .full-navigation span {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 125%;
     color: var(--white-color);
@@ -91,6 +98,9 @@ width: 100%;
 
 .full-navigation .bot-navigation {
     margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .full-navigation .bot-navigation .logout-White {
@@ -173,7 +183,8 @@ width: 100%;
     padding: 32px;
     gap: 24px;
     height: 100vh;
-    overflow: scroll;
+    
+   
 
 }
 
@@ -186,7 +197,7 @@ width: 100%;
   right: 0;
   background: rgba(0, 0, 0, 0.8);
   transition: opacity 500ms;
-  visibility: hidden;
+  visibility:hidden;
   opacity: 0;
 
 
@@ -219,8 +230,16 @@ width: 100%;
   gap: 10px;
 
 }
-
-
+/* popup loading */
+#popupLoading {
+  background:#000;
+}
+#popupLoading .popup{
+  background-color: #000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 500px) {
 
     /* Container footer */
@@ -325,235 +344,48 @@ width: 100%;
 }
 
 
-.loading{
-    display: none;
+body{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:#000;
 }
-.loader {
-    --path: #2f3545;
-    --dot: #5628ee;
-    --duration: 3s;
-    width: 44px;
-    height: 44px;
-    position: relative;
-    display: block;
-  }
-  .loader:before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    position: absolute;
-    display: block;
-    background: var(--dot);
-    top: 37px;
-    left: 19px;
-    transform: translate(-18px, -18px);
-    -webkit-animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-  .loader svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .loader svg rect,
-  .loader svg polygon,
-  .loader svg circle {
-    fill: none;
-    stroke: var(--path);
-    stroke-width: 10px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-  }
-  .loader svg polygon {
-    stroke-dasharray: 145 76 145 76;
-    stroke-dashoffset: 0;
-    -webkit-animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-  .loader svg rect {
-    stroke-dasharray: 192 64 192 64;
-    stroke-dashoffset: 0;
-    -webkit-animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-  .loader svg circle {
-    stroke-dasharray: 150 50 150 50;
-    stroke-dashoffset: 75;
-    -webkit-animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-  .loader.triangle {
-    width: 48px;
-  }
-  .loader.triangle:before {
-    left: 21px;
-    transform: translate(-10px, -18px);
-    -webkit-animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-            animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
+.loader-container{
+  width:80px;
+  height:4px;
+  margin:0 auto;
+  background-color:#aaa;
+  border-radius:20px;
+  overflow:hidden;
+}
+.loader{
+  width:60%;
+  height:100%;
+  background-color:#de4b4b;
+  display:block;
+  animation: animate  ease-out 1s infinite;
+}
+.loading{
+  margin:8px auto;
   
-  @-webkit-keyframes pathTriangle {
-    33% {
-      stroke-dashoffset: 74;
-    }
-    66% {
-      stroke-dashoffset: 147;
-    }
-    100% {
-      stroke-dashoffset: 221;
-    }
-  }
-  
-  @keyframes pathTriangle {
-    33% {
-      stroke-dashoffset: 74;
-    }
-    66% {
-      stroke-dashoffset: 147;
-    }
-    100% {
-      stroke-dashoffset: 221;
-    }
-  }
-  @-webkit-keyframes dotTriangle {
-    33% {
-      transform: translate(0, 0);
-    }
-    66% {
-      transform: translate(10px, -18px);
-    }
-    100% {
-      transform: translate(-10px, -18px);
-    }
-  }
-  @keyframes dotTriangle {
-    33% {
-      transform: translate(0, 0);
-    }
-    66% {
-      transform: translate(10px, -18px);
-    }
-    100% {
-      transform: translate(-10px, -18px);
-    }
-  }
-  @-webkit-keyframes pathRect {
-    25% {
-      stroke-dashoffset: 64;
-    }
-    50% {
-      stroke-dashoffset: 128;
-    }
-    75% {
-      stroke-dashoffset: 192;
-    }
-    100% {
-      stroke-dashoffset: 256;
-    }
-  }
-  @keyframes pathRect {
-    25% {
-      stroke-dashoffset: 64;
-    }
-    50% {
-      stroke-dashoffset: 128;
-    }
-    75% {
-      stroke-dashoffset: 192;
-    }
-    100% {
-      stroke-dashoffset: 256;
-    }
-  }
-  @-webkit-keyframes dotRect {
-    25% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(18px, -18px);
-    }
-    75% {
-      transform: translate(0, -36px);
-    }
-    100% {
-      transform: translate(-18px, -18px);
-    }
-  }
-  @keyframes dotRect {
-    25% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(18px, -18px);
-    }
-    75% {
-      transform: translate(0, -36px);
-    }
-    100% {
-      transform: translate(-18px, -18px);
-    }
-  }
-  @-webkit-keyframes pathCircle {
-    25% {
-      stroke-dashoffset: 125;
-    }
-    50% {
-      stroke-dashoffset: 175;
-    }
-    75% {
-      stroke-dashoffset: 225;
-    }
-    100% {
-      stroke-dashoffset: 275;
-    }
-  }
-  @keyframes pathCircle {
-    25% {
-      stroke-dashoffset: 125;
-    }
-    50% {
-      stroke-dashoffset: 175;
-    }
-    75% {
-      stroke-dashoffset: 225;
-    }
-    100% {
-      stroke-dashoffset: 275;
-    }
-  }
-  .loader {
-    display: inline-block;
-    margin: 0 16px;
-  }
-  
-  html {
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  *:before, *:after {
-    box-sizing: border-box;
-  }
-  
-  body {
-    min-height: 100vh;
-    background: #f5f9ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  body .dribbble {
-    position: fixed;
-    display: block;
-    right: 20px;
-    bottom: 20px;
-  }
-  body .dribbble img {
-    display: block;
-    height: 28px;
-  }
+  text-align:center;
+  font-size:16px;
+  font-weight:700;
+  color:#aaa;
+}
+@keyframes animate{
+    0%{
+        transform: translatex(-50%);
+      }
+    50%{
+        transform: translatex(100%);
+      }
+    100%{
+        transform:translatex(-50%)
+      }
 
-
+}
+ 

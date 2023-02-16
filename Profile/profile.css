@@ -34,8 +34,8 @@
 }
 
 .main-profile .top-profile img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
 }
 
@@ -43,8 +43,26 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
+}
+.information .username span{
+    font-size: 20px;
+    font-weight: 600;
 }
 
+.information .username button{
+    font-size: 14px;
+    padding: 7px 16px !important;
+    border-radius: 8px;
+    border: none;
+}
+.information .specification .content-specification{
+    font-weight: 600;
+}
+
+.information  .sign{
+    font-size: 14px;
+}
 .main-profile .top-profile .specification {
     display: flex;
     gap: 20px;
@@ -76,8 +94,8 @@
 }
 
 .main-profile .bot-profile .list-post img {
-    width: 300px;
-    height: auto;
+    width: 230px;
+    height: 230px;
 }
 
 
@@ -114,6 +132,13 @@
 }
 
 
+.title a{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+}
 
 /*  */
 
@@ -133,7 +158,11 @@
         border: 0px;
         order: 3;
         background-color: #121212;
-        flex: 1;
+        flex: none
+    }
+    
+    .full-navigation{
+        flex: none;
     }
 
     .full-navigation .top-navigation {

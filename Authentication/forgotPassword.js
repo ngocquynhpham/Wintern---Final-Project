@@ -5,7 +5,7 @@ let olbPwd = document.getElementById("oldPassword")
 let label = document.getElementById("label");
 let api = "http://3ca6-210-245-20-161.ngrok.io/api/v1/users/set_password/"
 
-
+let loading=document.getElementById("popupLoading")
 
 function check(){
     let infor = {
@@ -27,7 +27,9 @@ function check(){
             
             if (res.status === 200) {
                 localStorage.removeItem('Token')
-                window.location.href='/index.html'
+                loading.style.opacity = '1';
+                loading.style.visibility = "visible"
+                setTimeout(function () { window.location.href = "/index.html" }, 3000)
                 return res.json()
             } else {
                 olbPwd.style.borderColor = "red"

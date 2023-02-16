@@ -3,7 +3,9 @@
 
 
 
-
+.content{
+    overflow-y:scroll;
+}
 
 .content .main-content {
     grid-template-columns: 1fr 1fr;
@@ -501,7 +503,7 @@
 
     align-items: center;
     justify-content: center;
-    background:#222222;
+    background:#111111;
     position: relative;
     height: 100%;
     gap: 10px;
@@ -518,7 +520,7 @@
     height: 100%;
     align-items: center;
     max-width: 100px;
-    border-right:1px solid #333333 ;
+    border-right:1px solid #111111 ;
 }
 
 .popupNotification  .group-comment{
@@ -579,7 +581,15 @@
 
 
     /* Content */
-  
+    .content{
+        flex: none;
+    }
+    .full-navigation{
+        flex: none;
+    }
+    .navigation{
+        display: flex;
+    }
 
     .content .main-content{
         grid-template-columns: 1fr ;

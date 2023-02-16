@@ -1,5 +1,5 @@
 @import url(/index.css);
-
+@import url(/Home/homepage.css);
 .content{
     background-color: #111111;
 }
@@ -140,6 +140,8 @@ button{
 
 
 
+ 
+  
 @media screen and (max-width: 500px) {
 
     .content p{
