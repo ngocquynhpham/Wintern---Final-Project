@@ -38,7 +38,12 @@ function checkUsername() {
                 setTimeout(function(){window.location.href = "./Home/homepage.html"},3000) 
                 return res.json()
             }
-        }).then((data) => localStorage.setItem( "Token" , data.token))
+        }).then((data) => {
+           
+            localStorage.setItem("Id", data.id)
+
+            localStorage.setItem( "Token" , data.token)}
+            )
     
         
 

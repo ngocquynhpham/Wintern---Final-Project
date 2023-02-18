@@ -364,7 +364,7 @@ body{
 .loader{
   width:60%;
   height:100%;
-  background-color:#de4b4b;
+  background-color:#3579EA;
   display:block;
   animation: animate  ease-out 1s infinite;
 }

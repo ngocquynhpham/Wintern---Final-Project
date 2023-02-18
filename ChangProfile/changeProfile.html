@@ -8,6 +8,7 @@
     <title>Chỉnh sửa thông tin</title>
     <link rel="icon" type="image/x-icon" href="/assets/logo/LogoBlue.png">
     <link rel="stylesheet" href="./changProfile.css">
+    
 </head>
 
 <body>
@@ -52,7 +53,7 @@
             <p><a href="/Profile/profile.html"> Quay lại</a> </p>
             <div class="border">
                     <h1>Chỉnh sửa trang cá nhân </h1>
-                    <form action="">
+                    <form>
                        <table>                        
                             <tr class="group-avatar">
                                 <td rowspan="2">
@@ -60,7 +61,7 @@
                                 </td>
                                 
                                 <td class="name">
-                                    <span class="title" >Thành Tài</span>
+                                    <span class="title" id="name">Thành Tài</span>
                                 </td>
                             </tr>
 
@@ -72,22 +73,22 @@
                             </tr>
 
                             <tr>
-                                <td class="fullname"><span class="title">Tên</span></td>
-                                <td><input type="text"></td>
+                                <td class="fullname"><span class="title" >Tên</span></td>
+                                <td><input id="firstname" type="text"></td>
                             </tr>
 
                             <tr>
-                                <td class="username"><span class="title">Tên tài khoản</span></td>
-                                <td><input type="text"></td>
+                                <td class="username"><span class="title"  >Họ</span></td>
+                                <td><input type="text" id="lastname"></td>
                             </tr>
 
                             <tr>
-                                <td class="phone"><span class="title">SDT</span></td>
-                                <td><input type="number"></td>
+                                <td class="phone"><span class="title" >SDT</span></td>
+                                <td><input type="number" id="sdt"></td>
                             </tr>
                             <tr>
-                                <td class="email"><span class="title">Email</span></td>
-                                <td><input type="email"></td>
+                                <td class="email"><span class="title" >Email</span></td>
+                                <td><input type="email" id="email"></td>
                             </tr>
 
                             <tr>
@@ -104,8 +105,8 @@
                             </tr>
 
                             <tr>
-                                <td><span class="title"> tiểu sử</span> </td>
-                                <td><textarea name="" id="" rows="5"></textarea></td>
+                                <td><span class="title" > tiểu sử</span> </td>
+                                <td><textarea name="" id="bio" rows="5" ></textarea></td>
                             </tr>
                     
                             <tr>
@@ -134,7 +135,7 @@
 
                             </td>
                             <td>
-                                <button> Lưu lại</button>
+                                <button onclick="changeProfile()" type="button"> Lưu lại</button>
                             </td>
                         </tr>
 
@@ -274,7 +275,7 @@
    
 </body>
 
-
+<script src="./changProfile.js"></script>
 </html>
 
  
