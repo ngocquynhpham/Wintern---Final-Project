@@ -135,7 +135,7 @@
 }
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 500px) {
 
     /* Css container with Width screen 390px */
     .container {

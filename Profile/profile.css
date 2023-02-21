@@ -37,6 +37,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .main-profile .top-profile .information {
@@ -45,24 +46,27 @@
     gap: 20px;
     justify-content: center;
 }
-.information .username span{
+
+.information .username span {
     font-size: 20px;
     font-weight: 600;
 }
 
-.information .username button{
+.information .username button {
     font-size: 14px;
     padding: 7px 16px !important;
     border-radius: 8px;
     border: none;
 }
-.information .specification .content-specification{
+
+.information .specification .content-specification {
     font-weight: 600;
 }
 
-.information  .sign{
+.information .sign {
     font-size: 14px;
 }
+
 .main-profile .top-profile .specification {
     display: flex;
     gap: 20px;
@@ -84,14 +88,16 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 8px;
 
 }
+.main-profile .bot-profile .wrap-list-post{
 
+}
 .main-profile .bot-profile .list-post {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1010px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .main-profile .bot-profile .list-post img {
@@ -132,13 +138,17 @@
     max-height: 20px;
 }
 
+.title .list_post .target {
+    text-decoration: underline;
+}
 
-.title a{
+.title a {
     display: flex;
-    gap:10px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     color: var(--white-color);
+    font-size: 14px;
 }
 
 /*  */
@@ -161,8 +171,8 @@
         background-color: #121212;
         flex: none
     }
-    
-    .full-navigation{
+
+    .full-navigation {
         flex: none;
     }
 
@@ -252,10 +262,34 @@
         display: none;
     }
 
-
+    .main-profile .bot-profile .list-post {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr ;
+    }
 
     .main-profile .bot-profile .list-post img {
         width: 150px;
-        height: auto;
+        height: 150px;
+        object-fit: contain;
     }
+    .specification{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    .title{
+        gap: 16px;
+    }
+    .title a{
+        font-size: 13px;
+        gap:5px;
+    }
+    .title img{
+        max-width: 20px;
+        max-height: 20px;
+    }
+   
 }

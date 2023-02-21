@@ -2,16 +2,17 @@
 @import url(/Home/homepage.css);
 .content{
     background-color: #111111;
+    padding: 0px 24px;
 }
 .content p{
     
-    margin: 30px;
+    margin: 12px 0px;
     width: 100%;
 }
 .content a{
     color: var(--white-color);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .border{
@@ -20,7 +21,7 @@
 }
 
 .border h1{
-    padding:30px;
+    padding:12px;
     font-weight: 500;
     
 }
@@ -43,7 +44,7 @@
 }
 
 .border span{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     
 }
@@ -69,7 +70,7 @@ color: gray;
     border-radius: 50%;
 }
 td{
-    padding: 20px;
+    padding: 8px;
 }
 
 .name {
@@ -96,8 +97,9 @@ td{
    padding: 10px;
    width: 100%;
    background-color: #000; 
-   border: 1px solid #111111;
+   border: 1px solid rgb(85,85,85);
    color: var(--white-color);
+   border-radius: 4px;
     
 }
 .note-web{
@@ -111,7 +113,7 @@ td{
 textarea{
     width: 100%;
     background-color: #000; 
-   border: 1px solid #111111;
+   border: 1px solid rgb(85,85,85);
    resize: none;
    color: var(--white-color);
 }
@@ -127,13 +129,10 @@ select{
     font-size: 14px;
     color: var(--white-color);
 }
-input[type='checkbox']{
-    width: 3%;
-}
+
 button{
     background-color: var(--primary-color);
-    width: 50px;
-    height: 30px;
+    padding: 8px 20px;
     border-radius: 4px;
     border: 1px solid var(--primary-color);
     color: var(--white-color);
@@ -145,11 +144,14 @@ button{
  
   
 @media screen and (max-width: 500px) {
-
+    .content{
+        margin-bottom:80px;
+    }
     .content p{
     
-        margin: 10px;
+        
         width: 100%;
+     
     }
     .content a{
         
@@ -164,8 +166,8 @@ button{
     .border h1{
         padding:15px;
         font-weight: 500;
-        font-size: 18px;
-        text-align: center;
+        font-size: 16px;
+        text-align: left;
         
     }
     .border{
@@ -186,11 +188,8 @@ button{
         
     }
     
-    .border span{
-        font-size: 12px;
-        font-weight: 400;
-        
-    }
+ 
+    
     
     
     tbody{
@@ -206,6 +205,7 @@ button{
         
     .border  .title{
         color: var(--white-color);
+        font-size: 14px;
     
     } 
     .avatar{
@@ -240,7 +240,7 @@ button{
        padding: 10px;
        width: 100%;
        background-color: #000; 
-       border: 1px solid #111111;
+       border: 1px solid rgb(85,85,85);
        
         
     }
@@ -255,7 +255,7 @@ button{
     textarea{
         width: 100%;
         background-color: #000; 
-       border: 1px solid #111111;
+       border: 1px solid rgb(85,85,85);
        resize: none;
         
     }
@@ -274,15 +274,7 @@ button{
     input[type='checkbox']{
         width: 10%;
     }
-    button{
-        background-color: var(--primary-color);
-        width: 50px;
-        height: 30px;
-        border-radius: 4px;
-        border: 1px solid var(--primary-color);
-        color: var(--white-color);
-        font-weight: 500;
-    }
+   
     
 }
 

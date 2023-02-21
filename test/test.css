@@ -1,0 +1,21 @@
+.content .main-content .card .emotion {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0px;
+   
+}
+
+.content .main-content .card .emotion img {
+    cursor: pointer;
+}
+
+#iconLikeActive {
+    display: none;
+}
+
+#iconDislikeActive {
+    display: none;
+}
+body{
+    background-color: black;
+}
