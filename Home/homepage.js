@@ -22,31 +22,29 @@ function onloadHome() {
 
 				let name = data[i].user.first_name + " " + data[i].user.last_name;
 				console.log(data)
-				main_content.innerHTML += `<div class="card">
+				main_content.innerHTML += `
+				<div class="card">
 					<div class="infor">
 						<img class="avatar" src="/assets/avatar.jpg" alt="">
 						<span class="name">${name} </span>
 						<span class="time"> ᛫ 2d</span>
-					</div>
-					<div class="slideshow-container">
-						<div class="content-image" id="content-image">`
-						for(let i=0;i<data)
+					</div>						
 						`
+				for (let j = 0; j < data[i].image_url.length; j++) {
+					console.log(data[i].image_url[j])
+					main_content.innerHTML += `
+					<div class="slideshow-container">
+						<div class="content-image">
 							<div class="mySlides fade">
-								<img src="">
+								<img class="image-post" src="${	data[i].image_url[j]}">
 							</div>
-	
-							<div class="mySlides fade">
-								<img src="" style="width:100%">
-							</div>
-	
-							<div class="mySlides fade">
-								<img src="" style="width:100%">
-							</div>
-						</div>
-	
-						
-					</div>
+					`
+				}
+
+
+
+				main_content.innerHTML += `		
+					
 					<div>
 						<div class="emotion">
 							<img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
@@ -86,11 +84,11 @@ function onloadHome() {
 
 
 
-function  popupComment(data) {
+function popupComment(data) {
 	let taga = document.getElementById("taga")
 	taga.href = "#popup1"
 	let popupComment = document.getElementById("popup1")
-	let api="http://3ca6-210-245-20-161.ngrok.io/api/v1/post/"+data+"/"
+	let api = "http://3ca6-210-245-20-161.ngrok.io/api/v1/post/" + data + "/"
 	fetch(api, {
 		method: "GET",
 		headers: {
@@ -101,10 +99,10 @@ function  popupComment(data) {
 	}).then((res) => {
 		if (res.status === 200)
 			return res.json()
-	}).then((data)=>{
-		let fullname=data.user.last_name+" "+data.user.first_name
+	}).then((data) => {
+		let fullname = data.user.last_name + " " + data.user.first_name
 		// let img=data.image_url
-		
+
 		popupComment.innerHTML = `<div class="popup">
 		<div class="avatar-temp">
 			<div class="infor">
@@ -256,7 +254,7 @@ function  popupComment(data) {
 	a.href="popup1"
 `
 	})
-	
+
 
 }
 
