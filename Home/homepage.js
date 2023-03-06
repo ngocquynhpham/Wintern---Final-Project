@@ -18,61 +18,73 @@ function onloadHome() {
 	})
 
 		.then((data) => {
-			for (let i = 0; i < data.length; i++) {
-
+			for (let i = 0; i < 3; i++) {
+				if(data[i].image_url.length>0){
 				let name = data[i].user.first_name + " " + data[i].user.last_name;
-				console.log(data)
 				main_content.innerHTML += `
-				<div class="card">
+				<div class="card" id="card">
 					<div class="infor">
 						<img class="avatar" src="/assets/avatar.jpg" alt="">
 						<span class="name">${name} </span>
 						<span class="time"> ᛫ 2d</span>
-					</div>						
-						`
-				for (let j = 0; j < data[i].image_url.length; j++) {
-					console.log(data[i].image_url[j])
-					main_content.innerHTML += `
-					<div class="slideshow-container">
-						<div class="content-image">
-							<div class="mySlides fade">
-								<img class="image-post" src="${	data[i].image_url[j]}">
-							</div>
+					</div>		
+					<div class="slideshow-container" id="slideshow_container">
+						<div class="content-image" id="content_image">				
 					`
-				}
-
-
-
-				main_content.innerHTML += `		
-					
-					<div>
-						<div class="emotion">
-							<img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
-								alt="">
-							<img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
-								alt="">
-							<img onclick="Dislike()" id="iconDislikeActive"
-								src="/assets/iconMenu/Active/Dislike_White.png" alt="">
-							<img onclick="Dislike()" id="iconDislikeDefault"
-								src="/assets/iconMenu/Default/Dislike_White.png" alt="">
-							 <a id="taga" onclick="popupComment(${data[i].id})" href="#"><img src="/assets/iconMenu/Default/Comment_White.png" alt="#"> </a> 
-						</div>
-						<div class="group-statistical">
-							<div class="statistical">
-								<span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
-								<span>᛫</span>
-								<span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
-									thích </span>
-							</div>
-							<p class="status">${data[i].caption}</p>
+				let card=document.getElementById("card")
+				let slideshow_container=document.getElementById("slideshow_container")
+				let content_image=document.getElementById("content_image")
+				
+				
+			
+					for (let j = 0; j < data[i].image_url.length; j++) {
+						console.log(data[i].image_url[j])
+						content_image.innerHTML+= `
+								<div class="mySlides fade">
+									<img class="image-post" src="${data[i].image_url[j]}" width=390px>
+								</div>
+						`
+					}
+					content_image.innerHTML+=`</div>
+							`
+					slideshow_container.innerHTML+=`</div>`
 	
-							<p>Comment</p>
-							<input type="text" name="" id="" placeholder="Viết bình luận...">
+	
+	
+					card.innerHTML += `		
+					
+					
+						<div>
+							<div class="emotion">
+								<img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+									alt="">
+								<img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+									alt="">
+								<img onclick="Dislike()" id="iconDislikeActive"
+									src="/assets/iconMenu/Active/Dislike_White.png" alt="">
+								<img onclick="Dislike()" id="iconDislikeDefault"
+									src="/assets/iconMenu/Default/Dislike_White.png" alt="">
+								 <a id="taga" onclick="popupComment(${data[i].id})" href="#"><img src="/assets/iconMenu/Default/Comment_White.png" alt="#"> </a> 
+							</div>
+							<div class="group-statistical">
+								<div class="statistical">
+									<span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+									<span>᛫</span>
+									<span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+										thích </span>
+								</div>
+								<p class="status">${data[i].caption}</p>
+		
+								<p>Comment</p>
+								<input type="text" name="" id="" placeholder="Viết bình luận...">
+							</div>
 						</div>
-					</div>
-				</div>`
-			}
-
+					
+					</div>`
+				}
+	
+				}
+				
 
 		})
 
@@ -265,35 +277,35 @@ function popupComment(data) {
 // showSlides(slideIndex);
 
 // function plusSlides(n) {
-//   showSlides(slideIndex += n);
+// 	showSlides(slideIndex += n);
 // }
 
 // function currentSlide(n) {
-//   showSlides(slideIndex = n);
+// 	showSlides(slideIndex = n);
 // }
 
 // function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";  
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-//   dots[slideIndex-1].className += " active";
+// 	let i;
+// 	let slides = document.getElementsByClassName("mySlides");
+// 	let dots = document.getElementsByClassName("dot");
+// 	if (n > slides.length) { slideIndex = 1 }
+// 	if (n < 1) { slideIndex = slides.length }
+// 	for (i = 0; i < slides.length; i++) {
+// 		slides[i].style.display = "none";
+// 	}
+// 	for (i = 0; i < dots.length; i++) {
+// 		dots[i].className = dots[i].className.replace(" active", "");
+// 	}
+// 	slides[slideIndex - 1].style.display = "block";
+// 	dots[slideIndex - 1].className += " active";
 // }
 
 
 
 
-// var isAdvancedUpload = function() {
-//   var div = document.createElement('div');
-//   return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+// var isAdvancedUpload = function () {
+// 	var div = document.createElement('div');
+// 	return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
 // }();
 
 // let draggableFileArea = document.querySelector(".drag-file-area");
@@ -323,7 +335,7 @@ function popupComment(data) {
 // 	document.querySelector(".label").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: 0;"> browse file</span></span>`;
 // 	uploadButton.innerHTML = `Upload`;
 // 	fileName.innerHTML = fileInput.files[0].name;
-// 	fileSize.innerHTML = (fileInput.files[0].size/1024).toFixed(1) + " KB";
+// 	fileSize.innerHTML = (fileInput.files[0].size / 1024).toFixed(1) + " KB";
 // 	uploadedFile.style.cssText = "display: flex;";
 // 	progressBar.style.width = 0;
 // 	fileFlag = 0;
