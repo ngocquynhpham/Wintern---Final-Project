@@ -62,9 +62,10 @@
 
 }
 
-.content-image .mySlides img {
-    max-width: 379px;
-    max-height: 378px;
+.image-post {
+    width: 379px;
+    height: 378px;
+    object-fit: cover;
 }
 
 
