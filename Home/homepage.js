@@ -18,6 +18,7 @@ function onloadHome() {
 	})
 
 		.then((data) => {
+			
 			for (let i = 0; i < 3; i++) {
 				if (data[i].image_url.length > 0) {
 					let name = data[i].user.first_name + " " + data[i].user.last_name;
@@ -44,10 +45,16 @@ function onloadHome() {
 					for (let j = 0; j < data[i].image_url.length; j++) {
 						console.log(data[i].image_url[j])
 						content_image.innerHTML += `
-								<div class="mySlides${i+1}">
-									<img class="image-post" src="${data[i].image_url[j]}"  >
-								</div>
-						`
+								<div class="mySlides${i+1}" id="mySlides${i+1}">`
+						mySlides=document.getElementById("mySlides"+(i+1))
+							if(j>0){
+								mySlides.innerHTML+=`<img class="image-post" src="${data[i].image_url[j]}" style="display:none">`
+							}else{
+								mySlides.innerHTML+=`<img class="image-post" src="${data[i].image_url[j]}" >`
+							}
+									
+							content_image.innerHTML+=`</div>`	
+						
 					}
 
 					content_image.innerHTML += `</div>
@@ -57,21 +64,23 @@ function onloadHome() {
 					<a class="prev" onclick="plusSlides(-1,${i})"><img src="/assets/arrow_pre.png" alt=""></a>
 					<a class="next" onclick="plusSlides(1,${i})"><img src="/assets/arrow_next.png" alt=""></a>
 					<div class="mul" style="text-align:center" id="mul">
-					
+					<div style="text-align:center" id="dot" class>
 			
-					`}
-					
-					let mul = document.getElementById("mul")
-					for (let j = 0; j < data[i].image_url.length; j++) {
-						console.log(data[i].image_url[j])
-						let n = j + 1
-						mul.innerHTML += `
+					`
+					let dot=document.getElementById('dot')
+					for (let j = 0; j < data[i].image_url.length; j++){
 						
+						dot.innerHTML+=`
+						<span class="dot" onclick="currentSlide(1)"></span> 
 						
-						<span class="dot" onclick="currentSlide(${n})"></span>
-						`
+					  </div>`
 					}
-
+				}
+						
+					
+					
+					
+				
 
 
 					card.innerHTML += `		
@@ -108,14 +117,34 @@ function onloadHome() {
 
 			}
 
-
+		
+		
+	
 		})
-
-
-
+	
 
 }
 
+	let slideIndex = [1,1];
+	let slideId = ["mySlides1", "mySlides2"]
+	showSlides(1, 0);
+	showSlides(1, 1);
+	
+	function plusSlides(n, no) {
+		showSlides(slideIndex[no] += n, no);
+		}
+	
+		function showSlides(n, no) {
+		let i;
+		let x = document.getElementsByClassName(slideId[no]);
+		if (n > x.length) {slideIndex[no] = 1}    
+		if (n < 1) {slideIndex[no] = x.length}
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		}
+		x[slideIndex[no]-1].style.display = "block";  
+		}
+	
 
 
 
@@ -488,22 +517,3 @@ function onloadHome() {
 
 // }
 
-let slideIndex = [1,1];
-let slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
-
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
-
-function showSlides(n, no) {
-  let i;
-  let x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}    
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex[no]-1].style.display = "block";  
-}
