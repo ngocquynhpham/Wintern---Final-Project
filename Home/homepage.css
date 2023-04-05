@@ -102,7 +102,10 @@
 .mul {
     position: absolute;
     bottom: 20px;
-    right: 38%;
+    display: flex;
+    width: 389px;
+    align-items: center;
+    justify-content: center;
 }
 
 .dot {

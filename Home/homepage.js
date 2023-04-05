@@ -61,19 +61,26 @@ function onloadHome() {
 							`
 					if (data[i].image_url.length > 1) {
 						slideshow_container.innerHTML += `
-					<a class="prev" onclick="btnPre(mySlides${i+1})"><img src="/assets/arrow_pre.png" alt=""></a>
-					<a class="next" onclick="btnNext(mySlides${i+1})"><img src="/assets/arrow_next.png" alt=""></a>
+					<a class="prev" onclick="btnPre(mySlides${i+1},${i+1})"><img src="/assets/arrow_pre.png" alt=""></a>
+					<a class="next" onclick="btnNext(mySlides${i+1},${i+1})"><img src="/assets/arrow_next.png" alt=""></a>
 					<div class="mul" style="text-align:center" id="mul">
-					<div style="text-align:center" id="dot" class>
+					<div style="text-align:center" id="dot${i+1}" class>
 			
 					`
-					let dot=document.getElementById('dot')
+					let dot=document.getElementById('dot'+(i+1))
 					for (let j = 0; j < data[i].image_url.length; j++){
+						if(j>0){
+							dot.innerHTML+=`
+							<span class="dot" ></span> 
+							</div>`
+						 
+						}else{
+							dot.innerHTML+=`
+						<span class="dot" style="background-color:#696969"></span> 
+						</div>`
+					 
+						}
 						
-						dot.innerHTML+=`
-						<span class="dot" onclick="currentSlide(1)"></span> 
-						
-					  </div>`
 					}
 				}
 						
@@ -118,7 +125,7 @@ function onloadHome() {
 			}
 
 			
-			
+	
 			
 		}
 		)
@@ -126,10 +133,11 @@ function onloadHome() {
 	
 }
 
-function btnNext(slide){
+function btnNext(slide,dot){
 	
 	
-
+	dot=document.getElementById('dot'+dot)
+	arrayDot=dot.getElementsByClassName('dot')
 	arrayImg=slide[0].getElementsByClassName('image-post')
 	let count
 	for (let i=0;i<arrayImg.length;i++){
@@ -143,10 +151,16 @@ function btnNext(slide){
 
 	}
 	if(count===(arrayImg.length-1)){
+		arrayDot[0].style.backgroundColor='	#696969'
+		arrayDot[arrayImg.length-1].style.backgroundColor='#bbb'
+
 		
 		arrayImg[0].style.display='block'
 		arrayImg[arrayImg.length-1].style.display='none'
 	}else{
+		arrayDot[count+1].style.backgroundColor='	#696969'
+		arrayDot[count].style.backgroundColor='#bbb'
+
 		arrayImg[count+1].style.display='block'
 		arrayImg[count].style.display='none'
 	}
@@ -155,38 +169,12 @@ function btnNext(slide){
 	
 }
 
-function btnNext(slide){
-	
-	
 
-	arrayImg=slide[0].getElementsByClassName('image-post')
-	let count
-	for (let i=0;i<arrayImg.length;i++){
-		
-		if (arrayImg[i].style.display!=="none"){
-			count=i;
-			break;
-		}
-		
-		
 
-	}
-	if(count===(arrayImg.length-1)){
-		
-		arrayImg[0].style.display='block'
-		arrayImg[arrayImg.length-1].style.display='none'
-	}else{
-		arrayImg[count+1].style.display='block'
-		arrayImg[count].style.display='none'
-	}
+function btnPre(slide,dot){
 	
-	
-	
-}
-
-function btnPre(slide){
-	
-	
+	dot=document.getElementById('dot'+dot)
+	arrayDot=dot.getElementsByClassName('dot')
 
 	arrayImg=slide[0].getElementsByClassName('image-post')
 	let count
@@ -201,10 +189,13 @@ function btnPre(slide){
 
 	}
 	if(count===(0)){
-		
+		arrayDot[0].style.backgroundColor='	#bbb'
+		arrayDot[arrayImg.length-1].style.backgroundColor='#696969'
 		arrayImg[arrayImg.length-1].style.display='block'
 		arrayImg[0].style.display='none'
 	}else{
+		arrayDot[count-1].style.backgroundColor='	#696969'
+		arrayDot[count].style.backgroundColor='#bbb'
 		arrayImg[count-1].style.display='block'
 		arrayImg[count].style.display='none'
 	}
