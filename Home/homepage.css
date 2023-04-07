@@ -152,11 +152,11 @@
     cursor: pointer;
 }
 
-#iconLikeActive {
+.iconLikeActive {
     display: none;
 }
 
-#iconDislikeActive {
+.iconDislikeActive {
     display: none;
 }
 
@@ -206,7 +206,7 @@
 .left-comment {
     display: flex;
     align-items: center;
-    flex: 1;
+
 }
 
 .left-comment img {

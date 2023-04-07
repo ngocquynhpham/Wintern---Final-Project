@@ -19,11 +19,11 @@ function onloadHome() {
 
 		.then((data) => {
 			
-			for (let i = 0; i < 3; i++) {
+			for (let i = 0; i < data.length; i++) {
 				if (data[i].image_url.length > 0) {
 					let name = data[i].user.first_name + " " + data[i].user.last_name;
 					main_content.innerHTML += `
-				<div class="card" id="card${i}">
+					<div class="card" id="card${i}">
 					<div class="infor">
 						<img class="avatar" src="/assets/avatar.jpg" alt="">
 						<span class="name">${name} </span>
@@ -71,12 +71,12 @@ function onloadHome() {
 					for (let j = 0; j < data[i].image_url.length; j++){
 						if(j>0){
 							dot.innerHTML+=`
-							<span class="dot" ></span> 
+							<span class="dot" style="background-color:#696969" ></span> 
 							</div>`
 						 
 						}else{
 							dot.innerHTML+=`
-						<span class="dot" style="background-color:#696969"></span> 
+						<span class="dot"></span> 
 						</div>`
 					 
 						}
@@ -94,22 +94,22 @@ function onloadHome() {
 					
 					
 						<div>
-							<div class="emotion">
-								<img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_White.png"
+							<div class="emotion${i+1}">
+								<img onclick="Like(${i+1})" class="iconLikeActive" id="iconLikeActive${i+1}" src="/assets/iconMenu/Active/Like_White.png"
 									alt="">
-								<img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_White.png"
+								<img onclick="Like(${i+1})" class="iconLikeDefault" id="iconLikeDefault${i+1}" src="/assets/iconMenu/Default/Like_White.png"
 									alt="">
-								<img onclick="Dislike()" id="iconDislikeActive"
+								<img onclick="Dislike(${i+1})" class="iconDislikeActive" id="iconDislikeActive${i+1}"
 									src="/assets/iconMenu/Active/Dislike_White.png" alt="">
-								<img onclick="Dislike()" id="iconDislikeDefault"
+								<img onclick="Dislike(${i+1})" class="iconDislikeDefault" id="iconDislikeDefault${i+1}"
 									src="/assets/iconMenu/Default/Dislike_White.png" alt="">
 								 <a id="taga" onclick="popupComment(${data[i].id})" href="#"><img src="/assets/iconMenu/Default/Comment_White.png" alt="#"> </a> 
 							</div>
 							<div class="group-statistical">
 								<div class="statistical">
-									<span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+									<span class="like" id="like"><span id="numberLike${i+1}"> 99 </span> lượt thích</span>
 									<span>᛫</span>
-									<span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+									<span class="dislike" id="dislike"> <span id="numberDislike${i+1}">107 </span> lượt không
 										thích </span>
 								</div>
 								<p class="status">${data[i].caption}</p>
@@ -151,15 +151,15 @@ function btnNext(slide,dot){
 
 	}
 	if(count===(arrayImg.length-1)){
-		arrayDot[0].style.backgroundColor='	#696969'
-		arrayDot[arrayImg.length-1].style.backgroundColor='#bbb'
+		arrayDot[0].style.backgroundColor='#bbb	'
+		arrayDot[arrayImg.length-1].style.backgroundColor='#696969'
 
 		
 		arrayImg[0].style.display='block'
 		arrayImg[arrayImg.length-1].style.display='none'
 	}else{
-		arrayDot[count+1].style.backgroundColor='	#696969'
-		arrayDot[count].style.backgroundColor='#bbb'
+		arrayDot[count+1].style.backgroundColor='#bbb	'
+		arrayDot[count].style.backgroundColor=' #696969 '
 
 		arrayImg[count+1].style.display='block'
 		arrayImg[count].style.display='none'
@@ -189,13 +189,13 @@ function btnPre(slide,dot){
 
 	}
 	if(count===(0)){
-		arrayDot[0].style.backgroundColor='	#bbb'
-		arrayDot[arrayImg.length-1].style.backgroundColor='#696969'
+		arrayDot[0].style.backgroundColor='#696969'
+		arrayDot[arrayImg.length-1].style.backgroundColor='#bbb'
 		arrayImg[arrayImg.length-1].style.display='block'
 		arrayImg[0].style.display='none'
 	}else{
-		arrayDot[count-1].style.backgroundColor='	#696969'
-		arrayDot[count].style.backgroundColor='#bbb'
+		arrayDot[count-1].style.backgroundColor='#bbb	'
+		arrayDot[count].style.backgroundColor='#696969'
 		arrayImg[count-1].style.display='block'
 		arrayImg[count].style.display='none'
 	}
@@ -210,7 +210,7 @@ function btnPre(slide,dot){
 function popupComment(data) {
 
 	let taga = document.getElementById("taga")
-	taga.href = "#popup1"
+	taga	.href = "#popup1"
 	let popupComment = document.getElementById("popup1")
 	let api = "http://3ca6-210-245-20-161.ngrok.io/api/v1/post/" + data + "/"
 	fetch(api, {
@@ -237,7 +237,7 @@ function popupComment(data) {
 		<div class="left-comment">
 			<div class="slideshow-container">
 				<div class="content-image">
-			<div class="mySlides fade">
+			<div class="mySlides">
 				<img class="image-post" src="/assets/avatar.jpg">
 			</div>
 
@@ -359,19 +359,19 @@ function popupComment(data) {
 
 			</div>
 			<div class="emotion">
-				<img onclick="Like()" id="iconLikeActive" src="/assets/iconMenu/Active/Like_Black.png" alt="">
-				<img onclick="Like()" id="iconLikeDefault" src="/assets/iconMenu/Default/Like_Black.png" alt="">
-				<img onclick="Dislike()" id="iconDislikeActive" src="/assets/iconMenu/Active/Dislike_Black.png"
+				<img onclick="Like(${data.id})" class="iconLikeActive" id="iconLikeActive${data.id}" src="/assets/iconMenu/Active/Like_Black.png" alt="">
+				<img onclick="Like(${data.id})" class="iconLikeDefault" id="iconLikeDefault${data.id}" src="/assets/iconMenu/Default/Like_Black.png" alt="">
+				<img onclick="Dislike(${data.id})"  class="iconDislikeActive" id="iconDislikeActive${data.id}" src="/assets/iconMenu/Active/Dislike_Black.png"
 					alt="">
-				<img onclick="Dislike()" id="iconDislikeDefault" src="/assets/iconMenu/Default/Dislike_Black.png"
+				<img onclick="Dislike(${data.id})" class="iconDislikeDefault" id="iconDislikeDefault${data.id}" src="/assets/iconMenu/Default/Dislike_Black.png"
 					alt="">
 				<img src="/assets/iconMenu/Default/Comment_Black.png" alt="">
 			</div>
 
 			<div class="statistical">
-				<span class="like" id="like"><span id="numberLike"> 99 </span> lượt thích</span>
+				<span class="like" id="like"><span id="numberLike${data.id}"> 99 </span> lượt thích</span>
 				<span>᛫</span>
-				<span class="dislike" id="dislike"> <span id="numberDislike">107 </span> lượt không
+				<span class="dislike" id="dislike"> <span id="numberDislike${data.id}">107 </span> lượt không
 					thích </span>
 			</div>
 			<div>
@@ -538,13 +538,14 @@ removeFileButton.addEventListener("click", () => {
 
 
 
-function Like() {
-	let iconLikeDefault = document.getElementById("iconLikeDefault")
-	let iconDislikeDefault = document.getElementById("iconDislikeDefault")
-	let iconLikeActive = document.getElementById("iconLikeActive")
-	let iconDislikeActive = document.getElementById("iconDislikeActive")
-	let numberLike = document.getElementById("numberLike")
-	let numberDislike = document.getElementById("numberDislike")
+function Like(i) {
+	
+	let iconLikeDefault = document.getElementById("iconLikeDefault"+i)
+	
+	let iconLikeActive = document.getElementById("iconLikeActive"+i)
+	
+	let numberLike = document.getElementById("numberLike"+i)
+	
 	if (iconLikeDefault.style.display !== "none") {
 		iconLikeDefault.style.display = "none";
 		iconLikeActive.style.display = "inline";
@@ -561,7 +562,14 @@ function Like() {
 }
 
 
-function Dislike() {
+function Dislike(i) {
+
+	let iconDislikeDefault = document.getElementById("iconDislikeDefault"+i)
+
+	let iconDislikeActive = document.getElementById("iconDislikeActive"+i)
+	
+	let numberDislike = document.getElementById("numberDislike"+i)
+
 	if (iconDislikeDefault.style.display !== "none") {
 		iconDislikeDefault.style.display = "none";
 		iconDislikeActive.style.display = "inline";
